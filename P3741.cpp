@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    string s;
+    cin >> n >> s;
+    
+    int ans = 0;
+    
+    for (int i = 0; i < n - 1; i++) {
+        if (s[i] == 'V' && s[i+1] == 'K') {
+            ans++;
+            s[i] = 'X';
+            s[i+1] = 'X';
+        }
+    }
+    
+    for (int i = 0; i < n - 1; i++) {
+        if (s[i] == 'V' && s[i+1] == 'V') {
+            ans++;
+            break;
+        }
+        if (s[i] == 'K' && s[i+1] == 'K') {
+            ans++;
+            break; 
+        }
+    }
+    
+    cout << ans << endl;
+    return 0;
+}

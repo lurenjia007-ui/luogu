@@ -1,2 +1,1 @@
 # luogu
-<!-- sync-test -->

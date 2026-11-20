@@ -25,6 +25,13 @@ int f(char c1,char c2)
     {
         d1=c1-'A'+10;
     }
+    if(c2>='0'&&c2<='9')
+    {
+        d2=c2-'0';
+    }else 
+    {
+        d2=c2-'A'+10;
+    }
     return d1*16+d2;
 }
 string g(int d)
@@ -50,7 +57,7 @@ string g(int d)
 
 signed main()
 {
-    int a[256][256],b[256],u[256];
+    int a[256][256]={},b[256]={},u[256]={};
     int n,m;
     string s;
     cin>>n;
@@ -87,8 +94,8 @@ signed main()
                 cha=abs(x[j].z1-x[i].z1);
                 v=j;
             }
-            x[i].z2=x[v].z2;
         }
+        x[i].z2=x[v].z2;
     }
     for(int i=0;i<256;i++)
     {
@@ -107,8 +114,8 @@ signed main()
 
             }
         }
+        cout<<endl;
     }
-    cout<<endl;
     return 0;
 }
 
